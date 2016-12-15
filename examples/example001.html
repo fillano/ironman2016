@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<body>
+	<canvas id='canvas' width='800' height='600'></canvas>
+	<br><button id="step1">step1</button>
+    <button id="step2">step2</button>
+    <button id="step3">step3</button>
+    <button id="step4">step4</button>
+    <button id="step5">step5</button>
+	<script>
+	var ctx = document.getElementById('canvas').getContext('2d');
+    var image1 = new Image();
+    image1.src = 'media/image1.jpeg';
+    var image5 = new Image();
+    image5.src = 'media/image5.jpeg';
+    var image6 = new Image();
+    image6.src = 'media/image6.png';
+	document.getElementById('step1').addEventListener('click', function() {
+		ctx.drawImage(image1, 0, 0, 800, 600);
+	}, false);
+	document.getElementById('step2').addEventListener('click', function() {
+        ctx.drawImage(image5, 0, 0, 800, 600);
+    }, false);
+    document.getElementById('step3').addEventListener('click', function() {
+        //origin: 600, 450
+        var l = 4445, r = 5222, t = 32816, b = 33221;
+        var offx = 5845175, offy = 5568950;
+        var cx = 2603500, cy = 735013;
+        var r = 9144000 / 800;
+
+        var sx = Math.round(l / r), sy = Math.round(t / r);
+        var sw = Math.round((600 * r - l - r) / r), dw = Math.round(cx / r);
+        var dx = Math.round((offx - l) / r), dy = Math.round((offy - t) / r);
+        var sh = Math.round((450 * r - t - b) / r), dh = Math.round(sh * dw / sw);
+        ctx.drawImage(image6, sx, sy, sw, sh, dx, dy, dw, dh);
+    }, false);
+    document.getElementById('step4').addEventListener('click', function() {
+        ctx.fillStyle = '#6699CC';
+        ctx.moveTo(400, 420);
+        ctx.beginPath();
+        ctx.lineTo(430, 420);
+        ctx.lineTo(430 - 30 * Math.cos(Math.PI/3), 420 - 30 * Math.sin(Math.PI/3));
+        ctx.lineTo(400, 420);
+        ctx.closePath();
+        ctx.fill();
+    }, false);
+    document.getElementById('step5').addEventListener('click', function() {
+        ctx.strokeStyle = '#114477';
+        ctx.fillStyle = '#114477'
+        ctx.textBaseline = 'alphabetic';
+        ctx.font = '900 36px sans-serif';
+        ctx.strokeText('This is a Slide Title.', 450, 420);
+        ctx.font = '24px sans-serif';
+        ctx.fillText('This is a Slide Test.', 450, 480);
+    }, false);
+	</script>
+</body>
+</html>

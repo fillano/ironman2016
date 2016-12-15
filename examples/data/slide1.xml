@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+    <p:cSld>
+        <p:spTree>
+            <p:nvGrpSpPr>
+                <p:cNvPr id="1" name="" />
+                <p:cNvGrpSpPr />
+                <p:nvPr />
+            </p:nvGrpSpPr>
+            <p:grpSpPr>
+                <a:xfrm>
+                    <a:off x="0" y="0" />
+                    <a:ext cx="0" cy="0" />
+                    <a:chOff x="0" y="0" />
+                    <a:chExt cx="0" cy="0" />
+                </a:xfrm>
+            </p:grpSpPr>
+            <!-- shape for the title text box -->
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="2" name="Title 1" />
+                    <p:cNvSpPr>
+                        <a:spLocks noGrp="1" />
+                    </p:cNvSpPr>
+                    <p:nvPr>
+                        <p:ph type="title" />
+                    </p:nvPr>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm>
+                        <a:off x="457200" y="4019550" />
+                        <a:ext cx="8229600" cy="1143000" />
+                    </a:xfrm>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr />
+                    <a:lstStyle />
+                    <a:p>
+                        <a:r>
+                            <a:rPr lang="en-GB" altLang="zh-TW" sz="4000">
+                                <a:solidFill>
+                                    <a:srgbClr val="181818" />
+                                </a:solidFill>
+                                <a:latin typeface="微軟正黑體" charset="0" />
+                                <a:ea typeface="微軟正黑體" charset="0" />
+                                <a:cs typeface="微軟正黑體" charset="0" />
+                            </a:rPr>
+                            <a:t>Adjective Clauses</a:t>
+                        </a:r>
+                        <a:endParaRPr lang="zh-TW" altLang="en-GB" sz="4000">
+                            <a:latin typeface="微軟正黑體" charset="0" />
+                            <a:ea typeface="微軟正黑體" charset="0" />
+                            <a:cs typeface="微軟正黑體" charset="0" />
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <!-- shape for the content text box -->
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="3" name="Content Placeholder 2" />
+                    <p:cNvSpPr>
+                        <a:spLocks noGrp="1" />
+                    </p:cNvSpPr>
+                    <p:nvPr>
+                        <p:ph idx="1" />
+                    </p:nvPr>
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm>
+                        <a:off x="2954338" y="4968875" />
+                        <a:ext cx="5732462" cy="671513" />
+                    </a:xfrm>
+                </p:spPr>
+                <p:txBody>
+                    <a:bodyPr />
+                    <a:lstStyle />
+                    <a:p>
+                        <a:pPr marL="0" indent="0">
+                            <a:buFontTx />
+                            <a:buNone />
+                        </a:pPr>
+                        <a:r>
+                            <a:rPr lang="zh-TW" altLang="en-GB" sz="2400">
+                                <a:solidFill>
+                                    <a:srgbClr val="234466" />
+                                </a:solidFill>
+                                <a:latin typeface="Arial" charset="0" />
+                                <a:ea typeface="微軟正黑體" charset="0" />
+                                <a:cs typeface="微軟正黑體" charset="0" />
+                            </a:rPr>
+                            <a:t>形容詞子句</a:t>
+                        </a:r>
+                        <a:r>
+                            <a:rPr lang="en-GB" altLang="zh-TW" sz="2400">
+                                <a:solidFill>
+                                    <a:srgbClr val="234466" />
+                                </a:solidFill>
+                                <a:latin typeface="Arial" charset="0" />
+                                <a:ea typeface="微軟正黑體" charset="0" />
+                                <a:cs typeface="微軟正黑體" charset="0" />
+                            </a:rPr>
+                            <a:t>/</a:t>
+                        </a:r>
+                        <a:r>
+                            <a:rPr lang="zh-TW" altLang="en-GB" sz="2400">
+                                <a:solidFill>
+                                    <a:srgbClr val="234466" />
+                                </a:solidFill>
+                                <a:latin typeface="Arial" charset="0" />
+                                <a:ea typeface="微軟正黑體" charset="0" />
+                                <a:cs typeface="微軟正黑體" charset="0" />
+                            </a:rPr>
+                            <a:t>關係子句</a:t>
+                        </a:r>
+                    </a:p>
+                    <a:p>
+                        <a:pPr marL="0" indent="0" />
+                        <a:endParaRPr lang="zh-TW" altLang="en-GB">
+                            <a:solidFill>
+                                <a:srgbClr val="5D91C7" />
+                            </a:solidFill>
+                            <a:latin typeface="Arial" charset="0" />
+                            <a:ea typeface="微軟正黑體" charset="0" />
+                            <a:cs typeface="微軟正黑體" charset="0" />
+                        </a:endParaRPr>
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            <!-- shape for the picture box -->
+            <p:pic>
+                <p:nvPicPr>
+                    <p:cNvPr id="13317" name="Picture 5" descr="Option1-Chinese-Language-Or" />
+                    <p:cNvPicPr>
+                        <a:picLocks noChangeAspect="1" noChangeArrowheads="1" />
+                    </p:cNvPicPr>
+                    <p:nvPr />
+                </p:nvPicPr>
+                <p:blipFill>
+                    <!-- rId2 => image6.png -->
+                    <a:blip r:embed="rId2">
+                        <a:extLst>
+                            <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                                <a14:useLocalDpi xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main" val="0" />
+                            </a:ext>
+                        </a:extLst>
+                    </a:blip>
+                    <a:srcRect l="4445" t="32816" r="5222" b="33221" />
+                    <a:stretch>
+                        <a:fillRect />
+                    </a:stretch>
+                </p:blipFill>
+                <p:spPr bwMode="auto">
+                    <a:xfrm>
+                        <a:off x="5845175" y="5568950" />
+                        <a:ext cx="2603500" cy="735013" />
+                    </a:xfrm>
+                    <a:prstGeom prst="rect">
+                        <a:avLst />
+                    </a:prstGeom>
+                    <a:noFill />
+                    <a:extLst>
+                        <a:ext uri="{909E8E84-426E-40dd-AFC4-6F175D3DCCD1}">
+                            <a14:hiddenFill xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main">
+                                <a:solidFill>
+                                    <a:srgbClr val="FFFFFF" />
+                                </a:solidFill>
+                            </a14:hiddenFill>
+                        </a:ext>
+                    </a:extLst>
+                </p:spPr>
+            </p:pic>
+        </p:spTree>
+    </p:cSld>
+    <p:clrMapOvr>
+        <a:masterClrMapping />
+    </p:clrMapOvr>
+    <p:timing>
+        <p:tnLst>
+            <p:par>
+                <p:cTn id="1" dur="indefinite" restart="never" nodeType="tmRoot" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" />
+            </p:par>
+        </p:tnLst>
+    </p:timing>
+</p:sld>
