@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+	<canvas id='canvas' width='800' height='600'></canvas>
+	<br><button id="step1">step1</button>
+    <button id="step2">step2</button>
+    <button id="step3">step3</button>
+    <button id="step4">step4</button>
+	<script>
+    var presentationw = 9144000;
+    var canvasw = document.getElementById('canvas').width;
+	var ctx = document.getElementById('canvas').getContext('2d');
+    var image1 = new Image();
+    image1.src = 'media/image1.jpeg';
+    var image5 = new Image();
+    image5.src = 'media/image5.jpeg';
+    var image6 = new Image();
+    image6.src = 'media/image6.png';
+	document.getElementById('step1').addEventListener('click', function() {
+		ctx.drawImage(image1, 0, 0, 800, 600);
+	}, false);
+	document.getElementById('step2').addEventListener('click', function() {
+        ctx.drawImage(image5, 0, 0, 800, 600);
+    }, false);
+    document.getElementById('step3').addEventListener('click', function() {
+        var picx = image6.width, picy = image6.height;
+
+        var l = 4445 / 100000, r = 5222 / 100000, t = 32816 / 100000, b = 33221 / 100000;
+        var offx = 5845175, offy = 5568950;
+        var cx = 2603500, cy = 735013;
+
+        var sx = Math.round(picx * l), sy = Math.round(picy * t);
+        var sw = Math.round(picx - picx * (l + r)), sh = Math.round(picy - picy * (t + b));
+        var dx = emu2pixel(offx, presentationw, canvasw), dy = emu2pixel(offy, presentationw, canvasw);
+        var dw = emu2pixel(cx, presentationw, canvasw), dh = emu2pixel(cy, presentationw, canvasw);
+        console.log(sx, sy, sw, sh, dx, dy, dw, dh);
+        ctx.drawImage(image6, sx, sy, sw, sh, dx, dy, dw, dh);
+    }, false);
+    document.getElementById('step4').addEventListener('click', function() {
+        ctx.fillStyle = '#181818';
+        ctx.textBaseline = 'middle';
+        ctx.font = pt2pixel(4000, presentationw, canvasw) + 'px 微軟正黑體';
+        ctx.textAlign = 'right';
+        ctx.fillText('Adjective Clauses', emu2pixel(457200 + 8229600, presentationw, canvasw), emu2pixel(4019550 + 1143000/2, presentationw, canvasw));
+        ctx.fillStyle = '#181818';
+        ctx.textBaseline = 'top';
+        ctx.font = pt2pixel(2400, presentationw, canvasw) + 'px 微軟正黑體';
+        ctx.fillText('形容詞子句/關係子句', emu2pixel(2954338 + 5732462, presentationw, canvasw), emu2pixel(4968875, presentationw, canvasw));
+    }, false);
+    function pt2pixel(sz, screenw, canvasw) {
+        return Math.round(sz * 914400 * canvasw / 100 / 72 / screenw);
+    }
+    function emu2pixel(l, screenw, canvasw) {
+        return Math.round(l * canvasw / screenw);
+    }
+	</script>
+</body>
+</html>

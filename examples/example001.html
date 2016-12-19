@@ -1,24 +1,25 @@
+
 <!doctype html>
 <html>
 <body>
-	<canvas id='canvas' width='800' height='600'></canvas>
-	<br><button id="step1">step1</button>
-    <button id="step2">step2</button>
-    <button id="step3">step3</button>
-    <button id="step4">step4</button>
-    <button id="step5">step5</button>
-	<script>
-	var ctx = document.getElementById('canvas').getContext('2d');
+<canvas id='canvas' width='800' height='600'></canvas>
+<br><button id="step1">step1</button>
+<button id="step2">step2</button>
+<button id="step3">step3</button>
+<button id="step4">step4</button>
+<button id="step5">step5</button>
+<script>
+    var ctx = document.getElementById('canvas').getContext('2d');
     var image1 = new Image();
     image1.src = 'media/image1.jpeg';
     var image5 = new Image();
     image5.src = 'media/image5.jpeg';
     var image6 = new Image();
     image6.src = 'media/image6.png';
-	document.getElementById('step1').addEventListener('click', function() {
-		ctx.drawImage(image1, 0, 0, 800, 600);
-	}, false);
-	document.getElementById('step2').addEventListener('click', function() {
+    document.getElementById('step1').addEventListener('click', function() {
+        ctx.drawImage(image1, 0, 0, 800, 600);
+    }, false);
+    document.getElementById('step2').addEventListener('click', function() {
         ctx.drawImage(image5, 0, 0, 800, 600);
     }, false);
     document.getElementById('step3').addEventListener('click', function() {
@@ -53,6 +54,6 @@
         ctx.font = '24px sans-serif';
         ctx.fillText('This is a Slide Test.', 450, 480);
     }, false);
-	</script>
+</script>
 </body>
 </html>

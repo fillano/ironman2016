@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+<canvas id="canvas" width="800" height="600"></canvas><br>
+<button id="step1">顯示簡報</button>
+<button id="step3">動畫一</button>
+<button id="step4">動畫二</button>
+<button id="reset">reset</button>
+<script>
+    var presentationw = 9144000;
+    var presentationh = 6858000;
+    var canvasw = 800;
+    var colorScheme = {
+        dk1: '#2F2B20',
+        dk2: '#675E47',
+        lt1: '#FFFFFF',
+        lt2: '#DFDCB7',
+        accent1: '#A9A57C',
+        accent2: '#9CBEBD',
+        accent3: '#D2CB6C',
+        accent4: '#95A39D',
+        accent5: '#C89F5D',
+        accent6: '#B1A089',
+        hlink: '#D25814',
+        folHlink: '#849A0A'
+    };
+    var colorMap = {
+        bg1: 'lt1',
+        bg2: 'lt2',
+        tx1: 'dk1',
+        tx2: 'dk2',
+        accent1: 'accent1',
+        accent2: 'accent2',
+        accent3: 'accent3',
+        accent4: 'accent4',
+        accent5: 'accent5',
+        accent6: 'accent6',
+        hlink: 'hlink',
+        folHlink: 'folHlink'
+    };
+    var shapes = {
+        "7": {
+            name: 'Rectangle 6',
+            x: 8458200,
+            y: 0,
+            cx: 685800,
+            cy: 6858000,
+            presetGeom: 'rect',
+            solidFill: 'tx2'
+        },
+        "8": {
+            name: 'Rectangle 7',
+            x: 8458200,
+            y: 5486400,
+            cx: 685800,
+            cy: 685800,
+            presetGeom: 'rect',
+            solidFill: 'accent1'
+        }
+    };
+    var textBlocks = {
+        '4': {
+            type: 'title',
+            name: '標題 3',
+            x: 457200,
+            y: 274638,
+            cx: 7620000,
+            cy: 1143000,
+            presetGeom: 'rect',
+            text: [
+                {
+                    text: '簡報二',
+                    size: 4600,
+                    face: '新細明體',
+                    color: 'tx2'
+                }
+            ]
+        },
+        '5': {
+            name: '文字方塊 4',
+            x: 908865,
+            y: 2167064,
+            cx: 2031325,
+            cy: 461665,
+            presetGeom: 'rect',
+            text: [
+                {
+                    text: '文字方塊右移',
+                    size: 2400,
+                    face: '新細明體',
+                    color: 'tx2'
+                }
+            ]
+        },
+        '6': {
+            textBox: true,
+            name: '文字方塊 5',
+            x: 4789021,
+            y: 3693329,
+            cx: 2339102,
+            cy: 523220,
+            presetGeom: 'rect',
+            text: [
+                {
+                    text: '文字方塊下移',
+                    size: 2800,
+                    face: '新細明體',
+                    color: 'tx2'
+                }
+            ]
+        }
+    };
+    var timing = [
+        {
+            type: 'path',
+            target: '5',
+            motion: [
+                {
+                    action: 'M',
+                    x: 0,
+                    y: 0
+                },
+                {
+                    action: 'L',
+                    x: 0.25,
+                    y: 0
+                },
+                {
+                    action: 'E'
+                }
+            ],
+            duration: 1000,
+            state: 1
+        },
+        {
+            type: 'path',
+            target: '6',
+            motion: [
+                {
+                    action: 'M',
+                    x: 0,
+                    y: 0
+                },
+                {
+                    action: 'L',
+                    x: 0,
+                    y: 0.33322
+                },
+                {
+                    action: 'E'
+                }
+            ],
+            duration: 1000,
+            state: 1
+        }
+    ];
+    var ctx = document.getElementById('canvas').getContext('2d');
+    document.getElementById('step1').addEventListener('click', function() {
+        drawBackground();
+        drawForeground();
+        timing[0].state = 0;
+        timing[1].state = 0;
+    }, false);
+    document.getElementById('step3').addEventListener('click', function() {
+        startAnimation(timing[0]);
+    });
+    document.getElementById('step4').addEventListener('click', function() {
+        startAnimation(timing[1]);
+    });
+    document.getElementById('reset').addEventListener('click', function() {
+        window.location.reload();
+    });
+    function drawBackground() {
+        ctx.clearRect(0, 0, presentationw, presentationh);
+        drawShape("7");
+        drawShape("8");
+    }
+    function drawShape(id) {
+        ctx.fillStyle = colorScheme[colorMap[shapes[id].solidFill]];
+        ctx.fillRect(
+            emu2pixel(shapes[id].x, presentationw, canvasw),
+            emu2pixel(shapes[id].y, presentationw, canvasw),
+            emu2pixel(shapes[id].cx, presentationw, canvasw),
+            emu2pixel(shapes[id].cy, presentationw, canvasw)
+        );
+    }
+    function drawForeground() {
+        drawTextblock(textBlocks['4']);
+        drawTextblock(textBlocks['5']);
+        drawTextblock(textBlocks['6']);
+    }
+    function drawTextblock(block) {
+        var x = block.x, y = block.y, cx = block.cx, cy = block.cy;
+        var textOffX = 0;
+        block.text.forEach(function(item, index) {
+           if(index > 0) {
+               ctx.font = pt2pixel(block.text[index-1].size, presentationw, canvasw) + 'px '
+                   + block.text[index-1].face;
+               textOffX += ctx.measureText(block.text[index-1].text)
+           }
+           ctx.font = pt2pixel(item.size, presentationw, canvasw) + 'px ' + item.face;
+           ctx.fillStyle = colorScheme[colorMap[item.color]];
+           ctx.textBaseline = 'top';
+           ctx.fillText(item.text, emu2pixel(x, presentationw, canvasw) + textOffX, emu2pixel(y, presentationw, canvasw));
+        });
+    }
+    function startAnimation(timing) {
+        if(timing.state !== 0) return;
+        var start = null;
+        var startx = textBlocks[timing.target].x, starty = textBlocks[timing.target].y;
+        requestAnimationFrame(animate);
+        function animate(t) {
+            if(start === null) {
+                start = t;
+                requestAnimationFrame(animate);
+            } else {
+                textBlocks[timing.target].x = startx + Math.round(timing.motion[1].x * presentationw * (t - start) / timing.duration);
+                textBlocks[timing.target].y = starty + Math.round(timing.motion[1].y * presentationh * (t - start) / timing.duration);
+                drawBackground();
+                drawForeground();
+                if(t-start < timing.duration) {
+                    requestAnimationFrame(animate);
+                } else {
+                    timing.state = 1;
+                    textBlocks[timing.target].x = startx + Math.round(timing.motion[1].x * presentationw);
+                    textBlocks[timing.target].y = starty +  Math.round(timing.motion[1].y * presentationh);
+                    drawBackground();
+                    drawForeground();
+                }
+            }
+        }
+    }
+    function pt2pixel(sz, screenw, canvasw) {
+        return Math.round(sz * 914400 * canvasw / 100 / 72 / screenw);
+    }
+    function emu2pixel(l, screenw, canvasw) {
+        return Math.round(l * canvasw / screenw);
+    }
+</script>
+</body>
+</html>
