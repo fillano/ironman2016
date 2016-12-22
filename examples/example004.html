@@ -1,0 +1,467 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body style="background-color: #000;text-align: center;padding:0 0 0 0; margin: 0 0 0 0">
+<canvas id="canvas" width="800" height="600" style="background-color: #FFF"></canvas>
+<br>
+<button id="step1">顯示簡報</button>
+<button id="step3">動畫一</button>
+<button id="step4">動畫二</button>
+<button id="step5">動畫三</button>
+<button id="reset">reset</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(function () {
+        var vzw = document.documentElement.clientWidth;
+        var vzh = document.documentElement.clientHeight;
+        var presentationw = 9144000;
+        var presentationh = 6858000;
+        var _canvasd = calculateCanvasWidth(vzw, vzh);
+        var canvasw = _canvasd.w;
+        var canvas = document.getElementById('canvas');
+        canvas.width = _canvasd.w;
+        canvas.height = _canvasd.h;
+        var colorScheme = {
+            dk1: '#2F2B20',
+            dk2: '#675E47',
+            lt1: '#FFFFFF',
+            lt2: '#DFDCB7',
+            accent1: '#A9A57C',
+            accent2: '#9CBEBD',
+            accent3: '#D2CB6C',
+            accent4: '#95A39D',
+            accent5: '#C89F5D',
+            accent6: '#B1A089',
+            hlink: '#D25814',
+            folHlink: '#849A0A'
+        };
+        var colorMap = {
+            bg1: 'lt1',
+            bg2: 'lt2',
+            tx1: 'dk1',
+            tx2: 'dk2',
+            accent1: 'accent1',
+            accent2: 'accent2',
+            accent3: 'accent3',
+            accent4: 'accent4',
+            accent5: 'accent5',
+            accent6: 'accent6',
+            hlink: 'hlink',
+            folHlink: 'folHlink'
+        };
+        var shapes = {
+            "7": {
+                name: 'Rectangle 6',
+                x: 8458200,
+                y: 0,
+                cx: 685800,
+                cy: 6858000,
+                presetGeom: 'rect',
+                solidFill: 'tx2'
+            },
+            "8": {
+                name: 'Rectangle 7',
+                x: 8458200,
+                y: 5486400,
+                cx: 685800,
+                cy: 685800,
+                presetGeom: 'rect',
+                solidFill: 'accent1'
+            }
+        };
+        var textBlocks = {
+            '4': {
+                type: 'title',
+                name: '標題 3',
+                x: 457200,
+                y: 274638,
+                cx: 7620000,
+                cy: 1143000,
+                presetGeom: 'rect',
+                text: [
+                    {
+                        text: '簡報二',
+                        size: 4600,
+                        face: '新細明體',
+                        color: 'tx2'
+                    }
+                ]
+            },
+            '5': {
+                name: '文字方塊 4',
+                x: 908865,
+                y: 2167064,
+                cx: 2031325,
+                cy: 461665,
+                presetGeom: 'rect',
+                text: [
+                    {
+                        text: '文字方塊右移',
+                        size: 2400,
+                        face: '新細明體',
+                        color: 'tx2'
+                    }
+                ]
+            },
+            '6': {
+                textBox: true,
+                name: '文字方塊 5',
+                x: 4789021,
+                y: 3693329,
+                cx: 2339102,
+                cy: 523220,
+                presetGeom: 'rect',
+                text: [
+                    {
+                        text: '文字方塊下移',
+                        size: 2800,
+                        face: '新細明體',
+                        color: 'tx2'
+                    }
+                ]
+            },
+            '2': {
+                textBox: true,
+                name: '文字方塊 1',
+                x: 1246777,
+                y: 4357430,
+                cx: 2031325,
+                cy: 369332,
+                presetGeom: 'rect',
+                text: [
+                    {
+                        text: '文字方塊弧線右移',
+                        size: 1800,
+                        face: '新細明體',
+                        color: 'tx2'
+                    }
+                ]
+            }
+        };
+        var timing = [
+            {
+                type: 'path',
+                target: '5',
+                motion: [
+                    {
+                        action: 'M',
+                        x: 0,
+                        y: 0
+                    },
+                    {
+                        action: 'L',
+                        x: 0.25,
+                        y: 0
+                    },
+                    {
+                        action: 'E'
+                    }
+                ],
+                duration: 1000,
+                state: 1
+            },
+            {
+                type: 'path',
+                target: '6',
+                motion: [
+                    {
+                        action: 'M',
+                        x: 0,
+                        y: 0
+                    },
+                    {
+                        action: 'L',
+                        x: 0,
+                        y: 0.33322
+                    },
+                    {
+                        action: 'E'
+                    }
+                ],
+                duration: 1000,
+                state: 1
+            },
+            {
+                type: 'path',
+                target: '2',
+                motion: [
+                    {
+                        action: 'M',
+                        x: 0,
+                        y: 0
+                    },
+                    {
+                        action: 'C',
+                        x0: 0,
+                        y0: 0,
+                        x1: 0.125,
+                        y1: 0.125,
+                        x2: 0.25,
+                        y2: 0
+                    },
+                    {
+                        action: 'E'
+                    }
+                ],
+                duration: 1000,
+                state: 1
+            }
+        ];
+        var ctx = document.getElementById('canvas').getContext('2d');
+        document.getElementById('step1').addEventListener('click', function () {
+            drawBackground();
+            drawForeground();
+            timing[0].state = 0;
+            timing[1].state = 0;
+            timing[2].state = 0;
+        }, false);
+        document.getElementById('step3').addEventListener('click', function () {
+            startAnimation(timing[0]);
+        });
+        document.getElementById('step4').addEventListener('click', function () {
+            startAnimation(timing[1]);
+        });
+        document.getElementById('step5').addEventListener('click', function () {
+            startAnimation(timing[2]);
+        });
+        document.getElementById('reset').addEventListener('click', function () {
+            window.location.reload();
+        });
+        function drawBackground() {
+            ctx.clearRect(0, 0, presentationw, presentationh);
+            drawShape("7");
+            drawShape("8");
+        }
+
+        function drawShape(id) {
+            ctx.fillStyle = colorScheme[colorMap[shapes[id].solidFill]];
+            ctx.fillRect(
+                emu2pixel(shapes[id].x, presentationw, canvasw),
+                emu2pixel(shapes[id].y, presentationw, canvasw),
+                emu2pixel(shapes[id].cx, presentationw, canvasw),
+                emu2pixel(shapes[id].cy, presentationw, canvasw)
+            );
+        }
+
+        function drawForeground() {
+            drawTextblock(textBlocks['4']);
+            drawTextblock(textBlocks['5']);
+            drawTextblock(textBlocks['6']);
+            drawTextblock(textBlocks['2']);
+        }
+
+        function drawTextblock(block) {
+            var x = block.x, y = block.y, cx = block.cx, cy = block.cy;
+            var textOffX = 0;
+            block.text.forEach(function (item, index) {
+                if (index > 0) {
+                    ctx.font = pt2pixel(block.text[index - 1].size, presentationw, canvasw) + 'px '
+                        + block.text[index - 1].face;
+                    textOffX += ctx.measureText(block.text[index - 1].text)
+                }
+                ctx.font = pt2pixel(item.size, presentationw, canvasw) + 'px ' + item.face;
+                ctx.fillStyle = colorScheme[colorMap[item.color]];
+                ctx.textBaseline = 'top';
+                ctx.fillText(item.text, emu2pixel(x, presentationw, canvasw) + textOffX, emu2pixel(y, presentationw, canvasw));
+            });
+        }
+
+        function startAnimation(timing) {
+            if (timing.state !== 0) return;
+            var start = null;
+            var startx = textBlocks[timing.target].x, starty = textBlocks[timing.target].y;
+            var current = 0;
+            var motionx0 = timing.motion[0].x;
+            if ('null' !== typeof timing.motion[timing.motion.length - 2].x && 'undefined' !== typeof timing.motion[timing.motion.length - 2].x) {
+                var motionx1 = timing.motion[timing.motion.length - 2].x;
+            }
+            if ('null' !== typeof timing.motion[timing.motion.length - 2].x2 && 'undefined' !== typeof timing.motion[timing.motion.length - 2].x2) {
+                var motionx1 = timing.motion[timing.motion.length - 2].x2;
+            }
+            var motiony0 = timing.motion[0].y;
+            if ('null' !== typeof timing.motion[timing.motion.length - 2].y && 'undefined' !== typeof timing.motion[timing.motion.length - 2].y) {
+                var motiony1 = timing.motion[timing.motion.length - 2].y;
+            }
+            if ('null' !== typeof timing.motion[timing.motion.length - 2].y2 && 'undefined' !== typeof timing.motion[timing.motion.length - 2].y2) {
+                var motiony1 = timing.motion[timing.motion.length - 2].y2;
+            }
+            if (Math.abs(motionx1 - motionx0) > Math.abs(motiony1 - motiony0)) {
+                var axial = 'x'
+            } else {
+                var axial = 'y';
+            }
+            requestAnimationFrame(animate);
+            function animate(t) {
+                if (start === null) {
+                    start = t;
+                    if (timing.motion[current].action === 'M') {
+                        pathAction(timing.motion[0], textBlocks[timing.target], 0);
+                    }
+                    requestAnimationFrame(animate);
+                } else {
+                    current = getCurrent(timing.motion, (t - start) / timing.duration);
+                    console.log('animate:', current);
+                    pathAction(timing.motion[current[0]], textBlocks[timing.target], current[1], current[2]);
+                    drawBackground();
+                    drawForeground();
+                    if (t - start < timing.duration) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        timing.state = 1;
+                        drawBackground();
+                        drawForeground();
+                    }
+                }
+            }
+
+            function getCurrent(motions, t) {
+                var ret = [0, 0];
+                if (axial === 'x') {
+                    var startx = motions[0].x;
+                    var endx = !!motions[motions.length - 2].x ? motions[motions.length - 2].x : motions[motions.length - 2].x2;
+                    var length = endx - startx;
+                    motions.forEach(function (m, idx) {
+                        switch (m.action) {
+                            case 'M':
+                                break;
+                            case 'L':
+                                if ('null' !== typeof motions[idx - 1].x && 'undefined' !== typeof motions[idx - 1].x) {
+                                    if (motions[idx - 1].x <= (t * length) && (t * length) <= m.x) {
+                                        ret = [idx, (t * length - motions[idx - 1].x) / (m.x - motions[idx - 1].x), motions[idx - 1].x / length];
+                                    }
+                                    if ((t * length - motions[idx - 1].x) / (m.x - motions[idx - 1].x) > 1) {
+                                        ret = [idx, 1, 1];
+                                    }
+                                    return ret;
+                                }
+                                if ('null' !== typeof motions[idx - 1].x2 && 'undefined' !== typeof motions[idx - 1].x2) {
+                                    if (motions[idx - 1].x2 <= (t * length) && (t * length) <= m.x) {
+                                        ret = [idx, (t * length - motions[idx - 1].x2) / (m.x - motions[idx - 1].x2), motions[idx - 1].x2 / length];
+                                    }
+                                    if (t >= 1) {
+                                        ret = [idx, 1, 1];
+                                    }
+                                    return ret;
+                                }
+                                break;
+                            case 'C':
+                                console.log('C');
+                                if(m.x2 > m.x0) {
+                                    console.log('C00');
+                                    if (m.x0 <= t * length && t * length <= m.x2) {
+                                        ret = [idx, (t * length - m.x0) / (m.x2 - m.x0), m.x0 / length];
+                                        console.log('C01');
+                                    }
+                                } else {
+                                    console.log('C02', m.x2, t*length, m.x0);
+                                    if (m.x2 <= t * length && t * length <= m.x0) {
+                                        ret = [idx, (t * length + m.x2) / (m.x0 + m.x2), m.x2 / length];
+                                        console.log('C03', ret);
+                                    }
+                                }
+                                if (t >= 1) {
+                                    ret = [idx, 1, 1]
+                                }
+                                console.log('C1', ret);
+                                return ret;
+                                break;
+                        }
+                    });
+                } else {
+                    var starty = motions[0].y;
+                    var endy = !!motions[motions.length - 2].y ? motions[motions.length - 2].y : motions[motions.length - 2].y2;
+                    var length = Math.abs(endy - starty);
+                    for (var i = 0; i < motions.length; i++) {
+                        switch (motions[i].action) {
+                            case 'M':
+                                break;
+                            case 'L':
+                                if ('null' !== typeof motions[i - 1].y && 'undefined' !== typeof motions[i - 1].y) {
+                                    if (motions[i - 1].y / length <= t * length <= motions[i].y / length) {
+                                        ret = [i, (t * length - motions[i - 1].y) / (motions[i].y - motions[i - 1].y)]
+                                    }
+                                    return ret;
+                                }
+                                if ('null' !== typeof motions[i - 1].y2 && 'undefined' !== typeof motions[i - 1].y2) {
+                                    if (motions[i - 1].y2 / length <= t.length <= motions[i].y / length) {
+                                        ret = [i, (t * length - motions[i - 1].y2) / (motions[i].y - motions[i - 1].y2)];
+                                    }
+                                    return ret;
+                                }
+                                break;
+                            case 'C':
+                                if (motions[i].y0 / length <= t * length <= motions[i].y2 / length) {
+                                    return [i, (t * length - motions[i].y0) / (motions[i].y2 - motions[i].y0)];
+                                }
+                                break;
+                        }
+                    }
+                }
+                return ret;
+            }
+
+            function pathAction(motion, target, t) {
+                switch (motion.action) {
+                    case 'M':
+                        target.x = startx;
+                        target.y = starty;
+                        break;
+                    case 'L':
+                        target.x = startx + Math.round(motion.x * presentationw * easing(t));
+                        target.y = starty + Math.round(motion.y * presentationh * easing(t));
+                        break;
+                    case 'C':
+                        var p = define_quadratic_bezier(motion.x0 * presentationw,
+                            motion.y0 * presentationh,
+                            motion.x1 * presentationw,
+                            motion.y1 * presentationh,
+                            motion.x2 * presentationw,
+                            motion.y2 * presentationh)(easing(t));
+                        console.log('pathAction:C', p);
+                        target.x = startx + Math.round(p[0]);
+                        target.y = starty + Math.round(p[1]);
+                        break;
+                }
+            }
+        }
+
+        function pt2pixel(sz, screenw, canvasw) {
+            return Math.round(sz * 914400 * canvasw / 100 / 72 / screenw);
+        }
+
+        function emu2pixel(l, screenw, canvasw) {
+            return Math.round(l * canvasw / screenw);
+        }
+
+        function calculateCanvasWidth(vzw, vzh) {
+            if (vzh / 3 * 4 < vzw) {
+                return {w: Math.round((vzh - 20) * 4 / 3), h: vzh - 20};
+            } else {
+                return {w: vzw - Math.round(20 * 4 / 3), h: Math.round(vzw * 3 / 4) - 20};
+            }
+        }
+
+        function define_quadratic_bezier(x0, y0, x1, y1, x2, y2) {
+            return function (t) {
+                if (t < 0 || t > 1) throw "[define_quadratic_bezier] t must between 0 and 1.";
+                /*var p11_x = (1 - t) * x0 + t * x1;
+                var p11_y = (1 - t) * y0 + t * y1;
+                var p21_x = (1 - t) * x1 + t * x2;
+                var p21_y = (1 - t) * y1 + t * y2;
+                return [(1 - t) * p11_x + t * p21_x, (1 - t) * p11_y + t * p21_y];*/
+                var px = Math.pow(1-t, 2) * x0 + 2 * t * (1-t) * x1 + Math.pow(t, 2) * x2;
+                var py = Math.pow(1-t, 2) * y0 + 2 * t * (1-t) * y1 + Math.pow(t, 2) * y2;
+                return [px, py];
+            };
+        }
+
+        //this easing is from jquery's swing
+        function easing(p) {
+            return 0.5 - Math.cos(p * Math.PI) / 2;
+        }
+    });
+</script>
+</body>
+</html>
