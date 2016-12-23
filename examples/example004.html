@@ -446,11 +446,6 @@
         function define_quadratic_bezier(x0, y0, x1, y1, x2, y2) {
             return function (t) {
                 if (t < 0 || t > 1) throw "[define_quadratic_bezier] t must between 0 and 1.";
-                /*var p11_x = (1 - t) * x0 + t * x1;
-                var p11_y = (1 - t) * y0 + t * y1;
-                var p21_x = (1 - t) * x1 + t * x2;
-                var p21_y = (1 - t) * y1 + t * y2;
-                return [(1 - t) * p11_x + t * p21_x, (1 - t) * p11_y + t * p21_y];*/
                 var px = Math.pow(1-t, 2) * x0 + 2 * t * (1-t) * x1 + Math.pow(t, 2) * x2;
                 var py = Math.pow(1-t, 2) * y0 + 2 * t * (1-t) * y1 + Math.pow(t, 2) * y2;
                 return [px, py];
