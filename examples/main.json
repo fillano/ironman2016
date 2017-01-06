@@ -1,0 +1,3391 @@
+var data = {
+  "relations": {
+    "ppt/presentation.xml": {
+      "rId11": "ppt/theme/theme1.xml",
+      "ppt/theme/theme1.xml": "rId11",
+      "rId12": "ppt/tableStyles.xml",
+      "ppt/tableStyles.xml": "rId12",
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1",
+      "rId2": "ppt/slides/slide1.xml",
+      "ppt/slides/slide1.xml": "rId2",
+      "rId3": "ppt/slides/slide2.xml",
+      "ppt/slides/slide2.xml": "rId3",
+      "rId4": "ppt/slides/slide3.xml",
+      "ppt/slides/slide3.xml": "rId4",
+      "rId5": "ppt/slides/slide4.xml",
+      "ppt/slides/slide4.xml": "rId5",
+      "rId6": "ppt/slides/slide5.xml",
+      "ppt/slides/slide5.xml": "rId6",
+      "rId7": "ppt/slides/slide6.xml",
+      "ppt/slides/slide6.xml": "rId7",
+      "rId8": "ppt/printerSettings/printerSettings1.bin",
+      "ppt/printerSettings/printerSettings1.bin": "rId8",
+      "rId9": "ppt/presProps.xml",
+      "ppt/presProps.xml": "rId9",
+      "rId10": "ppt/viewProps.xml",
+      "ppt/viewProps.xml": "rId10"
+    },
+    "ppt/slideLayouts/slideLayout1.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout10.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout11.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout2.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout3.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout4.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout5.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout6.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout7.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout8.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideLayouts/slideLayout9.xml": {
+      "rId1": "ppt/slideMasters/slideMaster1.xml",
+      "ppt/slideMasters/slideMaster1.xml": "rId1"
+    },
+    "ppt/slideMasters/slideMaster1.xml": {
+      "rId11": "ppt/slideLayouts/slideLayout11.xml",
+      "ppt/slideLayouts/slideLayout11.xml": "rId11",
+      "rId12": "ppt/theme/theme1.xml",
+      "ppt/theme/theme1.xml": "rId12",
+      "rId13": "ppt/media/image2.png",
+      "ppt/media/image2.png": "rId13",
+      "rId1": "ppt/slideLayouts/slideLayout1.xml",
+      "ppt/slideLayouts/slideLayout1.xml": "rId1",
+      "rId2": "ppt/slideLayouts/slideLayout2.xml",
+      "ppt/slideLayouts/slideLayout2.xml": "rId2",
+      "rId3": "ppt/slideLayouts/slideLayout3.xml",
+      "ppt/slideLayouts/slideLayout3.xml": "rId3",
+      "rId4": "ppt/slideLayouts/slideLayout4.xml",
+      "ppt/slideLayouts/slideLayout4.xml": "rId4",
+      "rId5": "ppt/slideLayouts/slideLayout5.xml",
+      "ppt/slideLayouts/slideLayout5.xml": "rId5",
+      "rId6": "ppt/slideLayouts/slideLayout6.xml",
+      "ppt/slideLayouts/slideLayout6.xml": "rId6",
+      "rId7": "ppt/slideLayouts/slideLayout7.xml",
+      "ppt/slideLayouts/slideLayout7.xml": "rId7",
+      "rId8": "ppt/slideLayouts/slideLayout8.xml",
+      "ppt/slideLayouts/slideLayout8.xml": "rId8",
+      "rId9": "ppt/slideLayouts/slideLayout9.xml",
+      "ppt/slideLayouts/slideLayout9.xml": "rId9",
+      "rId10": "ppt/slideLayouts/slideLayout10.xml",
+      "ppt/slideLayouts/slideLayout10.xml": "rId10"
+    },
+    "ppt/slides/slide1.xml": {
+      "rId1": "ppt/slideLayouts/slideLayout1.xml",
+      "ppt/slideLayouts/slideLayout1.xml": "rId1"
+    },
+    "ppt/slides/slide2.xml": {
+      "rId1": "ppt/slideLayouts/slideLayout2.xml",
+      "ppt/slideLayouts/slideLayout2.xml": "rId1"
+    },
+    "ppt/slides/slide3.xml": {
+      "rId1": "ppt/slideLayouts/slideLayout6.xml",
+      "ppt/slideLayouts/slideLayout6.xml": "rId1"
+    },
+    "ppt/slides/slide4.xml": {
+      "rId1": "ppt/slideLayouts/slideLayout6.xml",
+      "ppt/slideLayouts/slideLayout6.xml": "rId1",
+      "rId2": "ppt/media/image2.png",
+      "ppt/media/image2.png": "rId2"
+    },
+    "ppt/slides/slide5.xml": {
+      "rId1": "ppt/slideLayouts/slideLayout2.xml",
+      "ppt/slideLayouts/slideLayout2.xml": "rId1"
+    },
+    "ppt/slides/slide6.xml": {
+      "rId1": "ppt/slideLayouts/slideLayout2.xml",
+      "ppt/slideLayouts/slideLayout2.xml": "rId1"
+    },
+    "ppt/theme/theme1.xml": {
+      "rId1": "ppt/media/image1.jpeg",
+      "ppt/media/image1.jpeg": "rId1"
+    }
+  },
+  "types": {
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme": [
+      {
+        "id": "rId11",
+        "target": "theme/theme1.xml"
+      },
+      {
+        "id": "rId12",
+        "target": "ppt/theme/theme1.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles": [
+      {
+        "id": "rId12",
+        "target": "tableStyles.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster": [
+      {
+        "id": "rId1",
+        "target": "slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide": [
+      {
+        "id": "rId2",
+        "target": "slides/slide1.xml"
+      },
+      {
+        "id": "rId3",
+        "target": "slides/slide2.xml"
+      },
+      {
+        "id": "rId4",
+        "target": "slides/slide3.xml"
+      },
+      {
+        "id": "rId5",
+        "target": "slides/slide4.xml"
+      },
+      {
+        "id": "rId6",
+        "target": "slides/slide5.xml"
+      },
+      {
+        "id": "rId7",
+        "target": "slides/slide6.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings": [
+      {
+        "id": "rId8",
+        "target": "printerSettings/printerSettings1.bin"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps": [
+      {
+        "id": "rId9",
+        "target": "presProps.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps": [
+      {
+        "id": "rId10",
+        "target": "viewProps.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout": [
+      {
+        "id": "rId11",
+        "target": "ppt/slideLayouts/slideLayout11.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout1.xml"
+      },
+      {
+        "id": "rId2",
+        "target": "ppt/slideLayouts/slideLayout2.xml"
+      },
+      {
+        "id": "rId3",
+        "target": "ppt/slideLayouts/slideLayout3.xml"
+      },
+      {
+        "id": "rId4",
+        "target": "ppt/slideLayouts/slideLayout4.xml"
+      },
+      {
+        "id": "rId5",
+        "target": "ppt/slideLayouts/slideLayout5.xml"
+      },
+      {
+        "id": "rId6",
+        "target": "ppt/slideLayouts/slideLayout6.xml"
+      },
+      {
+        "id": "rId7",
+        "target": "ppt/slideLayouts/slideLayout7.xml"
+      },
+      {
+        "id": "rId8",
+        "target": "ppt/slideLayouts/slideLayout8.xml"
+      },
+      {
+        "id": "rId9",
+        "target": "ppt/slideLayouts/slideLayout9.xml"
+      },
+      {
+        "id": "rId10",
+        "target": "ppt/slideLayouts/slideLayout10.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout1.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout2.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout6.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout6.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout2.xml"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/slideLayouts/slideLayout2.xml"
+      }
+    ],
+    "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image": [
+      {
+        "id": "rId13",
+        "target": "ppt/media/image2.png"
+      },
+      {
+        "id": "rId2",
+        "target": "ppt/media/image2.png"
+      },
+      {
+        "id": "rId1",
+        "target": "ppt/media/image1.jpeg"
+      }
+    ]
+  },
+  "presentation": {
+    "slideMasterIdList": [
+      {
+        "id": 2147483660,
+        "rid": "rId1",
+        "target": "ppt/slideMasters/slideMaster1.xml"
+      }
+    ],
+    "slideIdList": [
+      {
+        "id": 256,
+        "rid": "rId2",
+        "target": "ppt/slides/slide1.xml"
+      },
+      {
+        "id": 257,
+        "rid": "rId3",
+        "target": "ppt/slides/slide2.xml"
+      },
+      {
+        "id": 258,
+        "rid": "rId4",
+        "target": "ppt/slides/slide3.xml"
+      },
+      {
+        "id": 259,
+        "rid": "rId5",
+        "target": "ppt/slides/slide4.xml"
+      },
+      {
+        "id": 260,
+        "rid": "rId6",
+        "target": "ppt/slides/slide5.xml"
+      },
+      {
+        "id": 261,
+        "rid": "rId7",
+        "target": "ppt/slides/slide6.xml"
+      }
+    ],
+    "slideSize": {
+      "type": "screen4x3",
+      "cx": 9144000,
+      "cy": 6858000
+    },
+    "defaultTextStyle": {
+      "defaultParagraphStyle": {
+        "defRPr": {
+          "lang": "zh-TW"
+        }
+      },
+      "level1ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 0,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level2ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 457200,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level3ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 914400,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level4ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 1371600,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level5ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 1828800,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level6ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 2286000,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level7ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 2743200,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level8ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 3200400,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      },
+      "level9ParagraphProperty": {
+        "defRPr": {
+          "lang": "zh-TW",
+          "sz": 1800,
+          "kern": 1200,
+          "solidFill": "tx1",
+          "latin": "+mn-lt",
+          "ea": "+mn-ea",
+          "cs": "+mn-cs"
+        },
+        "marL": 3657600,
+        "algn": "l",
+        "defTabSz": 457200,
+        "rtl": false,
+        "eaLnBrk": true,
+        "latinLnBrk": false,
+        "hangingPunct": 1
+      }
+    }
+  },
+  "slides": {
+    "rId2": {
+      "colorScheme": {
+        "name": "相鄰",
+        "dk1": "#2F2B20",
+        "lt1": "#FFFFFF",
+        "dk2": "#675E47",
+        "lt2": "#DFDCB7",
+        "accent1": "#A9A57C",
+        "accent2": "#9CBEBD",
+        "accent3": "#D2CB6C",
+        "accent4": "#95A39D",
+        "accent5": "#C89F5D",
+        "accent6": "#B1A089",
+        "hlink": "#D25814",
+        "folHlink": "#849A0A"
+      },
+      "colorMap": {
+        "bg1": "lt1",
+        "tx1": "dk1",
+        "bg2": "lt2",
+        "tx2": "dk2",
+        "accent1": "accent1",
+        "accent2": "accent2",
+        "accent3": "accent3",
+        "accent4": "accent4",
+        "accent5": "accent5",
+        "accent6": "accent6",
+        "hlink": "hlink",
+        "folHlink": "folHlink"
+      },
+      "commonSlideData": {
+        "background": "#DFDCB7",
+        "shapes": [
+          {
+            "type": "shape",
+            "id": 2,
+            "name": "標題 1",
+            "spType": "ctrTitle",
+            "x": 685800,
+            "y": 1905000,
+            "cx": 7543800,
+            "cy": 2593975,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "新的簡報標題"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "b"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 3,
+            "name": "子標題 2",
+            "spType": "subTitle",
+            "x": 685800,
+            "y": 4572000,
+            "cx": 6461760,
+            "cy": 1066800,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "新的子標題"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "t"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 7,
+            "name": "Rectangle 6",
+            "x": 8458200,
+            "y": 0,
+            "cx": 685800,
+            "cy": 6858000,
+            "presetGeom": "rect",
+            "solidFill": "#675E47",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 8,
+            "name": "Rectangle 7",
+            "x": 8458200,
+            "y": 5486400,
+            "cx": 685800,
+            "cy": 685800,
+            "presetGeom": "rect",
+            "solidFill": "#A9A57C",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 6,
+            "name": "Slide Number Placeholder 5",
+            "spType": "sldNum",
+            "x": 8531788,
+            "y": 5648960,
+            "cx": 548640,
+            "cy": 396240,
+            "presetGeom": "bracketPair",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 0,
+              "tIns": 0,
+              "rIns": 0,
+              "bIns": 0,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 5,
+            "name": "Footer Placeholder 4",
+            "spType": "ftr",
+            "rot": 16200000,
+            "x": 7586910,
+            "y": 4048760,
+            "cx": 2367281,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 4,
+            "name": "Date Placeholder 3",
+            "spType": "dt",
+            "rot": 16200000,
+            "x": 7551351,
+            "y": 1645920,
+            "cx": 2438399,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "pic",
+            "id": 9,
+            "name": "圖片 8",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 5681,
+                "t": 34663,
+                "r": 6586,
+                "b": 32076
+              }
+            },
+            "x": 6145327,
+            "y": 6200380,
+            "cx": 2312871,
+            "cy": 657618,
+            "presetGeom": "rect"
+          }
+        ]
+      }
+    },
+    "rId3": {
+      "colorScheme": {
+        "name": "相鄰",
+        "dk1": "#2F2B20",
+        "lt1": "#FFFFFF",
+        "dk2": "#675E47",
+        "lt2": "#DFDCB7",
+        "accent1": "#A9A57C",
+        "accent2": "#9CBEBD",
+        "accent3": "#D2CB6C",
+        "accent4": "#95A39D",
+        "accent5": "#C89F5D",
+        "accent6": "#B1A089",
+        "hlink": "#D25814",
+        "folHlink": "#849A0A"
+      },
+      "colorMap": {
+        "bg1": "lt1",
+        "tx1": "dk1",
+        "bg2": "lt2",
+        "tx2": "dk2",
+        "accent1": "accent1",
+        "accent2": "accent2",
+        "accent3": "accent3",
+        "accent4": "accent4",
+        "accent5": "accent5",
+        "accent6": "accent6",
+        "hlink": "hlink",
+        "folHlink": "folHlink"
+      },
+      "commonSlideData": {
+        "background": "#DFDCB7",
+        "shapes": [
+          {
+            "type": "shape",
+            "id": 2,
+            "name": "標題 1",
+            "spType": "title",
+            "x": 457200,
+            "y": 274638,
+            "cx": 7620000,
+            "cy": 1143000,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "簡報一"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 3,
+            "name": "內容版面配置區 2",
+            "spType": "body",
+            "x": 457200,
+            "y": 1600200,
+            "cx": 7620000,
+            "cy": 4800600,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 2200,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 342900,
+                  "indent": -228600,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 20000,
+                  "buClr": "#A9A57C",
+                  "buFont": "Arial",
+                  "buChar": "•",
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 2200,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第一條"
+                    },
+                    {
+                      "type": "r",
+                      "lang": "en-US",
+                      "sz": 2200,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "zh-TW",
+                      "dirty": 0,
+                      "smtClean": 0
+                    },
+                    {
+                      "type": "br"
+                    },
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 2200,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "測試測試"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                },
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 2200,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 342900,
+                  "indent": -228600,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 20000,
+                  "buClr": "#A9A57C",
+                  "buFont": "Arial",
+                  "buChar": "•",
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 2200,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第二條"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                },
+                {
+                  "lvl": 2,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 1005840,
+                  "indent": -228600,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 20000,
+                  "buClr": "#D2CB6C",
+                  "buFont": "Arial",
+                  "buChar": "•",
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第三條"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                },
+                {
+                  "lvl": 3,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 1600,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 1280160,
+                  "indent": -228600,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 20000,
+                  "buClr": "#95A39D",
+                  "buFont": "Arial",
+                  "buChar": "•",
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1600,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第四條"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0
+            }
+          },
+          {
+            "type": "shape",
+            "id": 7,
+            "name": "Rectangle 6",
+            "x": 8458200,
+            "y": 0,
+            "cx": 685800,
+            "cy": 6858000,
+            "presetGeom": "rect",
+            "solidFill": "#675E47",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 8,
+            "name": "Rectangle 7",
+            "x": 8458200,
+            "y": 5486400,
+            "cx": 685800,
+            "cy": 685800,
+            "presetGeom": "rect",
+            "solidFill": "#A9A57C",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 6,
+            "name": "Slide Number Placeholder 5",
+            "spType": "sldNum",
+            "x": 8531788,
+            "y": 5648960,
+            "cx": 548640,
+            "cy": 396240,
+            "presetGeom": "bracketPair",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 0,
+              "tIns": 0,
+              "rIns": 0,
+              "bIns": 0,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 5,
+            "name": "Footer Placeholder 4",
+            "spType": "ftr",
+            "rot": 16200000,
+            "x": 7586910,
+            "y": 4048760,
+            "cx": 2367281,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 4,
+            "name": "Date Placeholder 3",
+            "spType": "dt",
+            "rot": 16200000,
+            "x": 7551351,
+            "y": 1645920,
+            "cx": 2438399,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "pic",
+            "id": 9,
+            "name": "圖片 8",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 5681,
+                "t": 34663,
+                "r": 6586,
+                "b": 32076
+              }
+            },
+            "x": 6145327,
+            "y": 6200380,
+            "cx": 2312871,
+            "cy": 657618,
+            "presetGeom": "rect"
+          }
+        ]
+      }
+    },
+    "rId4": {
+      "colorScheme": {
+        "name": "相鄰",
+        "dk1": "#2F2B20",
+        "lt1": "#FFFFFF",
+        "dk2": "#675E47",
+        "lt2": "#DFDCB7",
+        "accent1": "#A9A57C",
+        "accent2": "#9CBEBD",
+        "accent3": "#D2CB6C",
+        "accent4": "#95A39D",
+        "accent5": "#C89F5D",
+        "accent6": "#B1A089",
+        "hlink": "#D25814",
+        "folHlink": "#849A0A"
+      },
+      "colorMap": {
+        "bg1": "lt1",
+        "tx1": "dk1",
+        "bg2": "lt2",
+        "tx2": "dk2",
+        "accent1": "accent1",
+        "accent2": "accent2",
+        "accent3": "accent3",
+        "accent4": "accent4",
+        "accent5": "accent5",
+        "accent6": "accent6",
+        "hlink": "hlink",
+        "folHlink": "folHlink"
+      },
+      "commonSlideData": {
+        "background": "#DFDCB7",
+        "shapes": [
+          {
+            "type": "shape",
+            "id": 2,
+            "name": "文字方塊 1",
+            "spType": "title",
+            "x": 1246777,
+            "y": 4357430,
+            "cx": 2031325,
+            "cy": 369332,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "文字方塊弧線右移"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr",
+              "wrap": "none"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 3,
+            "name": "Date Placeholder 2",
+            "spType": "dt",
+            "x": 457200,
+            "y": 1600200,
+            "cx": 7620000,
+            "cy": 4800600,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0
+            }
+          },
+          {
+            "type": "shape",
+            "id": 7,
+            "name": "Rectangle 6",
+            "x": 8458200,
+            "y": 0,
+            "cx": 685800,
+            "cy": 6858000,
+            "presetGeom": "rect",
+            "solidFill": "#675E47",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 8,
+            "name": "Rectangle 7",
+            "x": 8458200,
+            "y": 5486400,
+            "cx": 685800,
+            "cy": 685800,
+            "presetGeom": "rect",
+            "solidFill": "#A9A57C",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 6,
+            "name": "文字方塊 5",
+            "spType": "sldNum",
+            "x": 4789021,
+            "y": 3693329,
+            "cx": 2339102,
+            "cy": 523220,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 2800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "文字方塊下移"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 0,
+              "tIns": 0,
+              "rIns": 0,
+              "bIns": 0,
+              "rtlCol": 0,
+              "anchor": "ctr",
+              "wrap": "none"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 5,
+            "name": "文字方塊 4",
+            "spType": "sldNum",
+            "rot": 16200000,
+            "x": 908865,
+            "y": 2167064,
+            "cx": 2031325,
+            "cy": 461665,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 2400,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "文字方塊右移"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr",
+              "wrap": "none"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 4,
+            "name": "標題 3",
+            "spType": "title",
+            "rot": 16200000,
+            "x": 7551351,
+            "y": 1645920,
+            "cx": 2438399,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "簡報二"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "pic",
+            "id": 9,
+            "name": "圖片 8",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 5681,
+                "t": 34663,
+                "r": 6586,
+                "b": 32076
+              }
+            },
+            "x": 6145327,
+            "y": 6200380,
+            "cx": 2312871,
+            "cy": 657618,
+            "presetGeom": "rect"
+          }
+        ]
+      }
+    },
+    "rId5": {
+      "colorScheme": {
+        "name": "相鄰",
+        "dk1": "#2F2B20",
+        "lt1": "#FFFFFF",
+        "dk2": "#675E47",
+        "lt2": "#DFDCB7",
+        "accent1": "#A9A57C",
+        "accent2": "#9CBEBD",
+        "accent3": "#D2CB6C",
+        "accent4": "#95A39D",
+        "accent5": "#C89F5D",
+        "accent6": "#B1A089",
+        "hlink": "#D25814",
+        "folHlink": "#849A0A"
+      },
+      "colorMap": {
+        "bg1": "lt1",
+        "tx1": "dk1",
+        "bg2": "lt2",
+        "tx2": "dk2",
+        "accent1": "accent1",
+        "accent2": "accent2",
+        "accent3": "accent3",
+        "accent4": "accent4",
+        "accent5": "accent5",
+        "accent6": "accent6",
+        "hlink": "hlink",
+        "folHlink": "folHlink"
+      },
+      "commonSlideData": {
+        "background": "#DFDCB7",
+        "shapes": [
+          {
+            "type": "shape",
+            "id": 2,
+            "name": "標題 1",
+            "spType": "title",
+            "x": 457200,
+            "y": 274638,
+            "cx": 7620000,
+            "cy": 1143000,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "貼一張圖片"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 3,
+            "name": "Date Placeholder 2",
+            "spType": "dt",
+            "x": 457200,
+            "y": 1600200,
+            "cx": 7620000,
+            "cy": 4800600,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0
+            }
+          },
+          {
+            "type": "shape",
+            "id": 7,
+            "name": "Rectangle 6",
+            "x": 8458200,
+            "y": 0,
+            "cx": 685800,
+            "cy": 6858000,
+            "presetGeom": "rect",
+            "solidFill": "#675E47",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 8,
+            "name": "Rectangle 7",
+            "x": 8458200,
+            "y": 5486400,
+            "cx": 685800,
+            "cy": 685800,
+            "presetGeom": "rect",
+            "solidFill": "#A9A57C",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 6,
+            "name": "Slide Number Placeholder 5",
+            "spType": "sldNum",
+            "x": 8531788,
+            "y": 5648960,
+            "cx": 548640,
+            "cy": 396240,
+            "presetGeom": "bracketPair",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 0,
+              "tIns": 0,
+              "rIns": 0,
+              "bIns": 0,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 5,
+            "name": "Slide Number Placeholder 4",
+            "spType": "sldNum",
+            "rot": 16200000,
+            "x": 7586910,
+            "y": 4048760,
+            "cx": 2367281,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 4,
+            "name": "Footer Placeholder 3",
+            "spType": "ftr",
+            "rot": 16200000,
+            "x": 7551351,
+            "y": 1645920,
+            "cx": 2438399,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "pic",
+            "id": 9,
+            "name": "圖片 8",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 5681,
+                "t": 34663,
+                "r": 6586,
+                "b": 32076
+              }
+            },
+            "x": 6145327,
+            "y": 6200380,
+            "cx": 2312871,
+            "cy": 657618,
+            "presetGeom": "rect"
+          },
+          {
+            "type": "pic",
+            "id": 3,
+            "name": "圖片 2",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 0,
+                "t": 30570,
+                "r": 0,
+                "b": 30084
+              }
+            },
+            "x": 757146,
+            "y": 2659927,
+            "cx": 7024271,
+            "cy": 2072827,
+            "presetGeom": "rect"
+          }
+        ]
+      }
+    },
+    "rId6": {
+      "colorScheme": {
+        "name": "相鄰",
+        "dk1": "#2F2B20",
+        "lt1": "#FFFFFF",
+        "dk2": "#675E47",
+        "lt2": "#DFDCB7",
+        "accent1": "#A9A57C",
+        "accent2": "#9CBEBD",
+        "accent3": "#D2CB6C",
+        "accent4": "#95A39D",
+        "accent5": "#C89F5D",
+        "accent6": "#B1A089",
+        "hlink": "#D25814",
+        "folHlink": "#849A0A"
+      },
+      "colorMap": {
+        "bg1": "lt1",
+        "tx1": "dk1",
+        "bg2": "lt2",
+        "tx2": "dk2",
+        "accent1": "accent1",
+        "accent2": "accent2",
+        "accent3": "accent3",
+        "accent4": "accent4",
+        "accent5": "accent5",
+        "accent6": "accent6",
+        "hlink": "hlink",
+        "folHlink": "folHlink"
+      },
+      "commonSlideData": {
+        "background": "#DFDCB7",
+        "shapes": [
+          {
+            "type": "shape",
+            "id": 2,
+            "name": "Title 1",
+            "spType": "title",
+            "x": 457200,
+            "y": 274638,
+            "cx": 7620000,
+            "cy": 1143000,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "altLang": "en-US",
+                      "smtClean": 0,
+                      "text": "按一下以編輯母片標題樣式"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 3,
+            "name": "標題 2",
+            "spType": "title",
+            "x": 457200,
+            "y": 1600200,
+            "cx": 7620000,
+            "cy": 4800600,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "自動化動作"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0
+            }
+          },
+          {
+            "type": "shape",
+            "id": 7,
+            "name": "Rectangle 6",
+            "x": 8458200,
+            "y": 0,
+            "cx": 685800,
+            "cy": 6858000,
+            "presetGeom": "rect",
+            "solidFill": "#675E47",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 8,
+            "name": "Rectangle 7",
+            "x": 8458200,
+            "y": 5486400,
+            "cx": 685800,
+            "cy": 685800,
+            "presetGeom": "rect",
+            "solidFill": "#A9A57C",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 6,
+            "name": "Slide Number Placeholder 5",
+            "spType": "sldNum",
+            "x": 8531788,
+            "y": 5648960,
+            "cx": 548640,
+            "cy": 396240,
+            "presetGeom": "bracketPair",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 0,
+              "tIns": 0,
+              "rIns": 0,
+              "bIns": 0,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 5,
+            "name": "Footer Placeholder 4",
+            "spType": "ftr",
+            "rot": 16200000,
+            "x": 7586910,
+            "y": 4048760,
+            "cx": 2367281,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 4,
+            "name": "內容版面配置區 3",
+            "spType": "dt",
+            "rot": 16200000,
+            "x": 7551351,
+            "y": 1645920,
+            "cx": 2438399,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第一行文字"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                },
+                {
+                  "lvl": 1,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 457200,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第二行文字"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                },
+                {
+                  "lvl": 2,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 914400,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第三行文字"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                },
+                {
+                  "lvl": 3,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 1371600,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 1800,
+                      "kern": 1200,
+                      "solidFill": "#2F2B20",
+                      "latin": "+mn-lt",
+                      "ea": "+mn-ea",
+                      "cs": "+mn-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "第四行文字"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "pic",
+            "id": 9,
+            "name": "圖片 8",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 5681,
+                "t": 34663,
+                "r": 6586,
+                "b": 32076
+              }
+            },
+            "x": 6145327,
+            "y": 6200380,
+            "cx": 2312871,
+            "cy": 657618,
+            "presetGeom": "rect"
+          }
+        ]
+      }
+    },
+    "rId7": {
+      "colorScheme": {
+        "name": "相鄰",
+        "dk1": "#2F2B20",
+        "lt1": "#FFFFFF",
+        "dk2": "#675E47",
+        "lt2": "#DFDCB7",
+        "accent1": "#A9A57C",
+        "accent2": "#9CBEBD",
+        "accent3": "#D2CB6C",
+        "accent4": "#95A39D",
+        "accent5": "#C89F5D",
+        "accent6": "#B1A089",
+        "hlink": "#D25814",
+        "folHlink": "#849A0A"
+      },
+      "colorMap": {
+        "bg1": "lt1",
+        "tx1": "dk1",
+        "bg2": "lt2",
+        "tx2": "dk2",
+        "accent1": "accent1",
+        "accent2": "accent2",
+        "accent3": "accent3",
+        "accent4": "accent4",
+        "accent5": "accent5",
+        "accent6": "accent6",
+        "hlink": "hlink",
+        "folHlink": "folHlink"
+      },
+      "commonSlideData": {
+        "background": "#DFDCB7",
+        "shapes": [
+          {
+            "type": "shape",
+            "id": 2,
+            "name": "標題 1",
+            "spType": "title",
+            "x": 457200,
+            "y": 274638,
+            "cx": 7620000,
+            "cy": 1143000,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 4600,
+                    "kern": 1200,
+                    "cap": "none",
+                    "spc": -100,
+                    "baseline": 0,
+                    "solidFill": "#675E47",
+                    "latin": "+mj-lt",
+                    "ea": "+mj-ea",
+                    "cs": "+mj-cs"
+                  },
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 0,
+                  "buNone": true,
+                  "runs": [
+                    {
+                      "type": "r",
+                      "lang": "en-US",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "zh-TW",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "The"
+                    },
+                    {
+                      "type": "r",
+                      "lang": "zh-TW",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "en-US",
+                      "dirty": 0,
+                      "smtClean": 0
+                    },
+                    {
+                      "type": "r",
+                      "lang": "en-US",
+                      "sz": 4600,
+                      "kern": 1200,
+                      "cap": "none",
+                      "spc": -100,
+                      "baseline": 0,
+                      "solidFill": "#675E47",
+                      "latin": "+mj-lt",
+                      "ea": "+mj-ea",
+                      "cs": "+mj-cs",
+                      "kumimoji": 1,
+                      "altLang": "zh-TW",
+                      "dirty": 0,
+                      "smtClean": 0,
+                      "text": "End"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 3,
+            "name": "內容版面配置區 2",
+            "spType": "body",
+            "x": 457200,
+            "y": 1600200,
+            "cx": 7620000,
+            "cy": 4800600,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "zh-TW",
+                    "sz": 2200,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 342900,
+                  "indent": -228600,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "spcBef": 20000,
+                  "buClr": "#A9A57C",
+                  "buFont": "Arial",
+                  "buChar": "•",
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0
+            }
+          },
+          {
+            "type": "shape",
+            "id": 7,
+            "name": "Rectangle 6",
+            "x": 8458200,
+            "y": 0,
+            "cx": 685800,
+            "cy": 6858000,
+            "presetGeom": "rect",
+            "solidFill": "#675E47",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 8,
+            "name": "Rectangle 7",
+            "x": 8458200,
+            "y": 5486400,
+            "cx": 685800,
+            "cy": 685800,
+            "presetGeom": "rect",
+            "solidFill": "#A9A57C",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 6,
+            "name": "Slide Number Placeholder 5",
+            "spType": "sldNum",
+            "x": 8531788,
+            "y": 5648960,
+            "cx": 548640,
+            "cy": 396240,
+            "presetGeom": "bracketPair",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 0,
+              "tIns": 0,
+              "rIns": 0,
+              "bIns": 0,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 5,
+            "name": "Footer Placeholder 4",
+            "spType": "ftr",
+            "rot": 16200000,
+            "x": 7586910,
+            "y": 4048760,
+            "cx": 2367281,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "shape",
+            "id": 4,
+            "name": "Date Placeholder 3",
+            "spType": "dt",
+            "rot": 16200000,
+            "x": 7551351,
+            "y": 1645920,
+            "cx": 2438399,
+            "cy": 365760,
+            "presetGeom": "rect",
+            "textBody": {
+              "paragraphs": [
+                {
+                  "lvl": 0,
+                  "defRPr": {
+                    "lang": "en-US",
+                    "sz": 1800,
+                    "kern": 1200,
+                    "solidFill": "#2F2B20",
+                    "latin": "+mn-lt",
+                    "ea": "+mn-ea",
+                    "cs": "+mn-cs"
+                  },
+                  "marL": 0,
+                  "algn": "l",
+                  "defTabSz": 914400,
+                  "rtl": false,
+                  "eaLnBrk": true,
+                  "latinLnBrk": false,
+                  "hangingPunct": 1,
+                  "runs": [
+                    {
+                      "type": "fld"
+                    },
+                    {
+                      "type": "end"
+                    }
+                  ]
+                }
+              ],
+              "vert": "horz",
+              "lIns": 91440,
+              "tIns": 45720,
+              "rIns": 91440,
+              "bIns": 45720,
+              "rtlCol": 0,
+              "anchor": "ctr"
+            }
+          },
+          {
+            "type": "pic",
+            "id": 9,
+            "name": "圖片 8",
+            "descr": "image6.png",
+            "rotWithShape": true,
+            "blip": {
+              "embed": "ppt/media/image2.png",
+              "srcRect": {
+                "l": 5681,
+                "t": 34663,
+                "r": 6586,
+                "b": 32076
+              }
+            },
+            "x": 6145327,
+            "y": 6200380,
+            "cx": 2312871,
+            "cy": 657618,
+            "presetGeom": "rect"
+          }
+        ]
+      }
+    }
+  }
+};

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            background-color: white;
+        }
+        .mask_canvas {
+            position: absolute;
+            top: -50000px;
+            left: -50000px;
+        }
+        .next_canvas {
+            position: absolute;
+            top: -100000px;
+            left: -100000px;
+        }
+    </style>
+</head>
+<body style="background-color: #000;text-align: center;padding:0 0 0 0; margin: 0 0 0 0">
+<canvas id="canvas" width="800" height="600"></canvas>
+<canvas id="mask" class="mask_canvas" width="800" height="600"></canvas>
+<canvas id="next" class="next_canvas" width="800" height="600"></canvas>
+<br>
+<button id="step1">簡報一</button>
+<button id="step2">簡報二</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$(function() {
+    var data = {
+        presentation: {
+            slideSize: {
+                type: 'screen4x3',
+                cx: 9144000,
+                cy: 6858000
+            }
+        },
+        slideList: [
+            {
+                colorScheme: {
+                    dk1: '#2F2B20',
+                    dk2: '#675E47',
+                    lt1: '#FFFFFF',
+                    lt2: '#DFDCB7',
+                    accent1: '#A9A57C',
+                    accent2: '#9CBEBD',
+                    accent3: '#D2CB6C',
+                    accent4: '#95A39D',
+                    accent5: '#C89F5D',
+                    accent6: '#B1A089',
+                    hlink: '#D25814',
+                    folHlink: '#849A0A'
+                },
+                colorMap: {
+                    bg1: 'lt1',
+                    bg2: 'lt2',
+                    tx1: 'dk1',
+                    tx2: 'dk2',
+                    accent1: 'accent1',
+                    accent2: 'accent2',
+                    accent3: 'accent3',
+                    accent4: 'accent4',
+                    accent5: 'accent5',
+                    accent6: 'accent6',
+                    hlink: 'hlink',
+                    folHlink: 'folHlink'
+                },
+                background: {
+                    solidFill: {
+                        srcRgbColor: 'bg1'
+                    }
+                },
+                shapes: [
+                    {
+                        id: '7',
+                        type: 'shape',
+                        name: 'Rectangle 6',
+                        x: 8458200,
+                        y: 0,
+                        cx: 685800,
+                        cy: 6858000,
+                        presetGeom: 'rect',
+                        solidFill: {
+                            srcRgbColor: 'tx2'
+                        }
+                    },
+                    {
+                        id: '8',
+                        type: 'shape',
+                        name: 'Rectangle 7',
+                        x: 8458200,
+                        y: 5486400,
+                        cx: 685800,
+                        cy: 685800,
+                        presetGeom: 'rect',
+                        solidFill: {
+                            srcRgbColor: 'accent1'
+                        }
+                    },
+                    {
+                        id: '4',
+                        type: 'shape',
+                        name: '標題 3',
+                        x: 457200,
+                        y: 274638,
+                        cx: 7620000,
+                        cy: 1143000,
+                        presetGeom: 'rect',
+                        text: [
+                            {
+                                text: '投影片1 - 文字',
+                                size: 4600,
+                                face: '新細明體',
+                                solidFill: {
+                                    srcRgbColor: 'tx2'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: '5',
+                        type: 'shape',
+                        name: '文字方塊 4',
+                        x: 908865,
+                        y: 2167064,
+                        cx: 2031325,
+                        cy: 461665,
+                        presetGeom: 'rect',
+                        text: [
+                            {
+                                text: '文字方塊一',
+                                size: 2400,
+                                face: '新細明體',
+                                solidFill: {
+                                    srcRgbColor: 'tx2'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: '6',
+                        type: 'shape',
+                        name: '文字方塊 5',
+                        x: 4789021,
+                        y: 3693329,
+                        cx: 2339102,
+                        cy: 523220,
+                        presetGeom: 'rect',
+                        text: [
+                            {
+                                text: '文字方塊二',
+                                size: 2800,
+                                face: '新細明體',
+                                solidFill: {
+                                    srcRgbColor: 'tx2'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: '2',
+                        type: 'shape',
+                        name: '文字方塊 1',
+                        x: 1246777,
+                        y: 4357430,
+                        cx: 2031325,
+                        cy: 369332,
+                        presetGeom: 'rect',
+                        text: [
+                            {
+                                text: '文字方塊三',
+                                size: 1800,
+                                face: '新細明體',
+                                solidFill: {
+                                    srcRgbColor: 'tx2'
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                transition: {
+                    type: 'comb',
+                    dir: 'horz',
+                    duration: 1000
+                },
+                colorScheme: {
+                    dk1: '#2F2B20',
+                    dk2: '#675E47',
+                    lt1: '#FFFFFF',
+                    lt2: '#DFDCB7',
+                    accent1: '#A9A57C',
+                    accent2: '#9CBEBD',
+                    accent3: '#D2CB6C',
+                    accent4: '#95A39D',
+                    accent5: '#C89F5D',
+                    accent6: '#B1A089',
+                    hlink: '#D25814',
+                    folHlink: '#849A0A'
+                },
+                colorMap: {
+                    bg1: 'lt1',
+                    bg2: 'lt2',
+                    tx1: 'dk1',
+                    tx2: 'dk2',
+                    accent1: 'accent1',
+                    accent2: 'accent2',
+                    accent3: 'accent3',
+                    accent4: 'accent4',
+                    accent5: 'accent5',
+                    accent6: 'accent6',
+                    hlink: 'hlink',
+                    folHlink: 'folHlink'
+                },
+                background: {
+                    solidFill: {
+                        srcRgbColor: 'bg1'
+                    }
+                },
+                shapes: [
+                    {
+                        id: '7',
+                        type: 'shape',
+                        name: 'Rectangle 6',
+                        x: 8458200,
+                        y: 0,
+                        cx: 685800,
+                        cy: 6858000,
+                        presetGeom: 'rect',
+                        solidFill: {
+                            srcRgbColor: 'tx2'
+                        }
+                    },
+                    {
+                        id: '8',
+                        type: 'shape',
+                        name: 'Rectangle 7',
+                        x: 8458200,
+                        y: 5486400,
+                        cx: 685800,
+                        cy: 685800,
+                        presetGeom: 'rect',
+                        solidFill: {
+                            srcRgbColor: 'accent1'
+                        }
+                    },
+                    {
+                        id: '4',
+                        type: 'shape',
+                        name: '標題 3',
+                        x: 457200,
+                        y: 274638,
+                        cx: 7620000,
+                        cy: 1143000,
+                        presetGeom: 'rect',
+                        text: [
+                            {
+                                text: '投影片2 - 貼一張圖來',
+                                size: 4600,
+                                face: '新細明體',
+                                solidFill: {
+                                    srcRgbColor: 'tx2'
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: '5',
+                        type: 'pic',
+                        name: '圖片 1',
+                        x: 757146,
+                        y: 2659927,
+                        cx: 7024271,
+                        cy: 2072827,
+                        presetGeom: 'rect',
+                        blip: {
+                            embed: 'media/image6.png',
+                            srcRect: {
+                                l: 0,
+                                t: 30570,
+                                r: 0,
+                                b: 30084
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+    var canvas = $('#canvas')[0];
+
+    canvasInit();
+
+    drawSlide(data, 0, canvas);
+
+    $('#step1').click(function() {
+        drawSlide(data, 0, canvas);
+    });
+
+    $('#step2').click(function() {
+        drawSlide(data, 1, canvas);
+    });
+
+    function canvasInit() {
+        var vzw = document.documentElement.clientWidth;
+        var vzh = document.documentElement.clientHeight;
+        var _canvasd = calculateCanvasWidth(vzw, vzh);
+        var canvas = $('#canvas')[0];
+        var mask = $('#mask')[0];
+        var next = $('#next')[0];
+        canvas.width = _canvasd.w;
+        canvas.height = _canvasd.h;
+        mask.width = _canvasd.w;
+        mask.height = _canvasd.h;
+        next.width = _canvasd.w;
+        next.height = _canvasd.h;
+    }
+
+    function drawSlide(data, idx, canvas) {
+        var slide = data.slideList[idx];
+        var vzw = document.documentElement.clientWidth;
+        var vzh = document.documentElement.clientHeight;
+        var presentationw = parseInt(data.presentation.slideSize.cx, 10);
+        var _canvasd = calculateCanvasWidth(vzw, vzh);
+        var canvasw = _canvasd.w;
+        if(!!slide.transition) {
+            var mask = $('#mask')[0];
+            var next = $('#next')[0];
+            var ctx_canvas = canvas.getContext('2d');
+            var ctx_mask = mask.getContext('2d');
+            var ctx_next = next.getContext('2d');
+            ctx_next.fillStyle = slide.colorScheme[slide.colorMap[slide.background.solidFill.srcRgbColor]];
+            ctx_next.fillRect(0, 0, next.width, next.height);
+            ctx_mask.fillStyle = slide.colorScheme[slide.colorMap[slide.background.solidFill.srcRgbColor]];
+            ctx_mask.fillRect(0, 0, mask.width, mask.height);
+            slide.shapes.forEach(function(shape, idx) {
+                if(shape.type === 'shape') {
+                    drawShape(slide, idx, ctx_next, presentationw, canvasw);
+                }
+                if(shape.type === 'pic') {
+                    drawPic(slide, idx, ctx_next, presentationw, canvasw);
+                }
+            });
+            drawTransition(slide.transition, ctx_canvas, ctx_next, ctx_mask, _canvasd);
+        } else {
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = slide.colorScheme[slide.colorMap[slide.background.solidFill.srcRgbColor]];
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            slide.shapes.forEach(function(shape, idx) {
+                if(shape.type === 'shape') {
+                    drawShape(slide, idx, ctx, presentationw, canvasw);
+                }
+                if(shape.type === 'pic') {
+                    drawPic(slide, idx, ctx, presentationw, canvasw);
+                }
+            });
+        }
+    }
+
+    function drawShape(slide, idx, ctx, presentationw, canvasw) {
+        var shape = slide.shapes[idx];
+        if(!!shape.solidFill) {
+            var backgroundColor = shape.solidFill.srcRgbColor;
+        } else {
+            var backgroundColor = 'bg1';
+        }
+        ctx.fillStyle = slide.colorScheme[slide.colorMap[backgroundColor]];
+        ctx.fillRect(
+            emu2pixel(shape.x, presentationw, canvasw),
+            emu2pixel(shape.y, presentationw, canvasw),
+            emu2pixel(shape.cx, presentationw, canvasw),
+            emu2pixel(shape.cy, presentationw, canvasw)
+        );
+        if(!!shape.text && Array.isArray(shape.text) && shape.text.length > 0) {
+            drawTextblock(shape);
+        }
+
+        function drawTextblock(block) {
+            var x = block.x, y = block.y, cx = block.cx, cy = block.cy;
+            var textOffX = 0;
+            block.text.forEach(function (item, index) {
+                if(!!item.solidFill) {
+                    if (index > 0) {
+                        ctx.font = pt2pixel(block.text[index - 1].size, presentationw, canvasw) + 'px '
+                            + block.text[index - 1].face;
+                        textOffX += ctx.measureText(block.text[index - 1].text)
+                    }
+                    ctx.font = pt2pixel(item.size, presentationw, canvasw) + 'px ' + item.face;
+                    ctx.fillStyle = slide.colorScheme[slide.colorMap[item.solidFill.srcRgbColor]];
+                    ctx.textBaseline = 'top';
+                    ctx.fillText(item.text, emu2pixel(x, presentationw, canvasw) + textOffX, emu2pixel(y, presentationw, canvasw));
+                }
+            });
+        }
+    }
+
+    function drawPic(slide, idx, ctx, presentationw, canvasw) {
+        var pic = slide.shapes[idx];
+        var img = new Image();
+        img.src = pic.blip.embed;
+        img.onload = function() {
+            var picx = img.width, picy = img.height;
+            var l = pic.blip.srcRect.l / 100000, r = pic.blip.srcRect.r / 100000, t = pic.blip.srcRect.t / 100000, b = pic.blip.srcRect.b / 100000;
+            var offx = pic.x, offy = pic.y;
+            var cx = pic.cx, cy = pic.cy;
+
+            var sx = Math.round(picx * l), sy = Math.round(picy * t);
+            var sw = Math.round(picx - picx * (l + r)), sh = Math.round(picy - picy * (t + b));
+            var dx = emu2pixel(offx, presentationw, canvasw), dy = emu2pixel(offy, presentationw, canvasw);
+            var dw = emu2pixel(cx, presentationw, canvasw), dh = emu2pixel(cy, presentationw, canvasw);
+            ctx.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
+        }
+    }
+
+    function drawTransition(transition, target, next, mask, canvasd) {
+        var start = null;
+        requestAnimationFrame(transitionAnimate);
+        function transitionAnimate(t) {
+            if(start === null) {
+                start = t;
+                requestAnimationFrame(transitionAnimate);
+            } else {
+                var progress = (t - start) / transition.duration;
+                mask.fillStyle = '#FFFFFF';
+                mask.fillRect(0, 0, canvasd.w, canvasd.h);
+                drawTransitionPattern(transition, mask, canvasd, progress);
+                var x = 0, y = 0;
+                var maskImg = mask.getImageData(0, 0, canvasd.w, canvasd.h);
+                var nextImg = next.getImageData(0, 0, canvasd.w, canvasd.h);
+                var targetImg = target.getImageData(0, 0, canvasd.w, canvasd.h);
+                var output = target.createImageData(targetImg);
+                for(var i=0; i<targetImg.data.length; i+=4) {
+                    if(maskImg.data[i] == 0 && maskImg.data[i+1] == 0 && maskImg.data[i+2] == 0) {
+                        output.data[i] = nextImg.data[i];
+                        output.data[i+1] = nextImg.data[i+1];
+                        output.data[i+2] = nextImg.data[i+2];
+                        output.data[i+3] = 255;
+                    } else {
+                        output.data[i] = targetImg.data[i];
+                        output.data[i+1] = targetImg.data[i+1];
+                        output.data[i+2] = targetImg.data[i+2];
+                        output.data[i+3] = 255;
+                    }
+                }
+                target.putImageData(output, 0, 0);
+                if(t - start < transition.duration) {
+                    requestAnimationFrame(transitionAnimate);
+                }
+            }
+        }
+    }
+
+    function drawTransitionPattern(transition, mask, canvasd, progress) {
+        switch(transition.type) {
+            case 'comb':
+                var num = 8;
+                var start = 0;
+                var side = 0;
+                if(transition.dir === 'horz') {
+                    var bh = Math.round(canvasd.h / num);
+                    while(start < canvasd.h) {
+                        mask.fillStyle = '#000000';
+                        if(side % 2 === 0) {
+                            mask.fillRect(0, start, Math.round(progress * canvasd.w), bh);
+                        } else {
+                            var l = Math.round(canvasd.w * (1 - progress));
+                            mask.fillRect(Math.round(canvasd.w * (1 - progress)), start, canvasd.w - l, bh);
+                        }
+                        start += bh;
+                        side++;
+                    }
+                } else {
+                    var bw = Math.round(canvasd.w / num);
+                    while(start < canvasd.w) {
+                        mask.fillStyle = '#000000';
+                        if(side % 2 === 0) {
+                            mask.fillRect(start, 0, bw, Math.round(progress * canvasd.h));
+                        } else {
+                            var t = Math.round(canvasd.h * (1 - progress));
+                            mask.fillRect(start, Math.round(canvasd.h * (1 - progress)), bw, canvasd.h - t);
+                        }
+                        start += bw;
+                        side++;
+                    }
+                }
+                break;
+        }
+    }
+
+    function pt2pixel(sz, screenw, canvasw) {
+        return Math.round(sz * 914400 * canvasw / 100 / 72 / screenw);
+    }
+
+    function emu2pixel(l, screenw, canvasw) {
+        return Math.round(l * canvasw / screenw);
+    }
+
+    function calculateCanvasWidth(vzw, vzh) {
+        if (vzh / 3 * 4 < vzw) {
+            return {w: Math.round((vzh - 20) * 4 / 3), h: vzh - 20};
+        } else {
+            return {w: vzw - Math.round(20 * 4 / 3), h: Math.round(vzw * 3 / 4) - 20};
+        }
+    }
+
+    function define_quadratic_bezier(x0, y0, x1, y1, x2, y2) {
+        return function (t) {
+            if (t < 0 || t > 1) throw "[define_quadratic_bezier] t must between 0 and 1.";
+            var px = Math.pow(1-t, 2) * x0 + 2 * t * (1-t) * x1 + Math.pow(t, 2) * x2;
+            var py = Math.pow(1-t, 2) * y0 + 2 * t * (1-t) * y1 + Math.pow(t, 2) * y2;
+            return [px, py];
+        };
+    }
+
+    //this easing is from jquery's swing
+    function easing(p) {
+        return 0.5 - Math.cos(p * Math.PI) / 2;
+    }
+});
+</script>
+</body>
+</html>
